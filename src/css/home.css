@@ -27,7 +27,7 @@
   min-height: 80px;
   padding: 10px;
   background: url('../img/on-neon.gif') no-repeat;
-  background-size: 50%;
+  background-size: contain;
   background-position: center;
   transition: 0.1s ease-out;
 }
@@ -40,6 +40,7 @@
 .dashboard > .slogan > .slogan-title > h3 {
   font-size: 16px;
   font-style: italic;
+  text-align: center;
   white-space: nowrap;
   animation: 
     typing 2s steps(50, end),
@@ -220,10 +221,6 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-  }
-
-  .dashboard > .slogan > .slogan-logo {
-    background-size: 220px;
   }
 
   .dashboard > .slogan > .slogan-title {

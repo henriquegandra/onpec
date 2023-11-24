@@ -14,13 +14,13 @@ const rootPath = path.resolve(__dirname);
 const rootMode = `${process.env.ONPEC_MODE}` || 'prod';
 
 const url = (rootMode.includes('prod'))
-  ? 'http://on.roncador.com.br:7117'
-  : 'http://on.roncador.com.br:5115';
+? `${process.env.API_URL}:5115`
+: `${process.env.API_URL}:${process.env.API_PORT}`;
   
 if (rootMode.includes('dev')) {
 
   console.log('================================');
-  console.log(process.env.NODE_ENV);
+  console.log(process.env.ONPEC_MODE);
   console.log(url);
   console.log('================================');
 }

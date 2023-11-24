@@ -1,13 +1,13 @@
 :root {
-  --roncador: #006e63;
-  --roncadorcc: #006e63cc;
-  --roncador20: #00584f;
-  --roncador30: #004d45;
-  --roncador40: #00423b;
-  --roncador50: #003732;
-  --roncador60: #002c28;
-  --roncador70: #00211e;
-  --roncador80: #001614;
+  --roncador: #444444;
+  --roncadorcc: #222222cc;
+  --roncador20: #333333;
+  --roncador30: #222222;
+  --roncador40: #222222;
+  --roncador50: #111111;
+  --roncador60: #111111;
+  --roncador70: #000000;
+  --roncador80: #000000;
   --roncadoree: #006e6355;
   --neonroncador: #1a7d73;
   --neonroncadoree: #498d9cee;
@@ -316,7 +316,7 @@ input:-internal-autofill-selected {
   left: 0;
   width: 100%;
   padding-top: 5%;
-  background-image: url("../img/wave-green.png");
+  background-image: url("../img/wave-black.png");
   background-repeat: repeat-x;
   background-size: 40%;
   opacity: .5;
@@ -332,7 +332,7 @@ input:-internal-autofill-selected {
   padding-top: 12%;
   bottom: -5px;
   left: 0;
-  background-image: url("../img/wave-green.png");
+  background-image: url("../img/wave-black.png");
   background-repeat: repeat-x;
   background-size: 100%;
   opacity: .4;
@@ -347,7 +347,7 @@ input:-internal-autofill-selected {
   padding-top: 8%;
   bottom: -5px;
   left: 0;
-  background-image: url("../img/wave-green.png");
+  background-image: url("../img/wave-black.png");
   background-repeat: repeat-x;
   background-size: 65%;
   opacity: .6;
