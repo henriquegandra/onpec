@@ -1,0 +1,40 @@
+{
+  "name": "onPec",
+  "version": "3.0.2",
+  "description": "Versão Offline para Pesagem do Gado",
+  "main": "main.js",
+  "repository": "https://github.com/henriquegandra/onpec.git",
+  "author": "Henrique Gandra",
+  "license": "MIT",
+  "scripts": {
+    "start": "set ONPEC_MODE=prod&&electron-forge start",
+    "dev": "set ONPEC_MODE=dev&&electron ./",
+    "test": "node --test test/",
+    "test:watch": "node --watch --test test/",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "rebuild": "electron-rebuild"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "@electron-forge/publisher-github": "^6.0.4",
+    "electron": "^25.2.0",
+    "electron-rebuild": "^3.2.9",
+    "electron-winstaller": "^5.1.2"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.0.3",
+    "electron-progressbar": "^2.0.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "os": "^0.1.2",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6"
+  },
+  "packageManager": "yarn@3.6.3"
+}

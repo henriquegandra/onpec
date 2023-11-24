@@ -1,0 +1,305 @@
+@import url("index.css");
+@import url("solid.min.css");
+@import url("fontawesome.min.css");
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 2000px;
+  padding: 0 0 0 0;
+}
+
+.dashboard > .slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 20px;
+  transition: 0.1s ease-out;
+}
+
+.dashboard > .slogan > .slogan-logo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  background: url('../img/on-neon.gif') no-repeat;
+  background-size: 50%;
+  background-position: center;
+  transition: 0.1s ease-out;
+}
+
+.dashboard > .slogan > .slogan-title {
+  width: 230px;
+  padding: calc(10px + 1vw) 0;
+}
+
+.dashboard > .slogan > .slogan-title > h3 {
+  font-size: 16px;
+  font-style: italic;
+  white-space: nowrap;
+  animation: 
+    typing 2s steps(50, end),
+    blink-caret .5s step-end infinite;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.dashboard > .slogan > #status {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dashboard > .slogan > #status > p {
+  margin-left: 10px;
+  font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+  font-size: calc(10px + 0.5vw);
+  font-weight: normal;
+}
+
+.dashboard > .slogan > #status > i {
+  display: none;
+  padding: 10px;
+  background: var(--bsblack88);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.dashboard > .slogan > #status > i:hover {
+  background: var(--neonroncador);
+  -webkit-box-shadow: 0 0 12px 0 var(--neonroncador);
+  -moz-box-shadow: 0 0 12px 0 var(--neonroncador);
+  box-shadow: 0 0 12px 0 var(--neonroncador);
+}
+
+.dashboard > .global {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+  min-height: 600px;
+  padding: 60px 20px;
+}
+
+.dashboard > .global > section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  min-width: 300px;
+  margin: 10px 0;
+}
+
+.dashboard > .global > section > h3 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px 12px 12px 12px;
+  border-bottom: 1px solid #efefef;
+}
+
+.dashboard > .global > section > h2 > span {
+  font-size: 14px;
+}
+
+.dashboard > .global > section > h3 > p {
+  font-size: 18px;
+}
+
+.dashboard > .global > section button {
+  min-width: 180px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.dashboard > .global > section button > .sub-menu {
+  display: none;
+  position: absolute;
+  width: 180px;
+  padding: 18px;
+  margin: 10px 0px 0px -22px;
+  background: var(--bgbgee);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 0px 0px 12px 12px;
+  transition: ease-in-out .3s;
+}
+
+.dashboard > .global > section button:hover > .sub-menu {
+  display: block;
+}
+
+.dashboard > .global > section button:hover > .sub-menu > a:hover {
+  color: var(--neonroncador);
+}
+
+#log-count {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 0;
+  background: var(--bsblack88);
+  color: var(--text);
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+}
+
+#news {
+  position: fixed;
+  top: -2px;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 260px;
+  padding: 6px;
+  text-align: center;
+  background: var(--bsblack88);
+  border-radius: 0 0 22px 22px;
+  z-index: 10;
+  transition: 0.3s ease-out;
+}
+
+#news:hover {
+  background: var(--bsblackcc);
+  -webkit-box-shadow: 0 0 8px var(--bsblack);
+  -moz-box-shadow: 0 0 8px var(--bsblack);
+  box-shadow: 0 0 8px var(--bsblack);
+}
+
+#news > h4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+#news > #conteudo {
+  display: none;
+}
+
+#news:hover > #conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#news > #conteudo > p {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1100px) {
+  .back-button {
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    border-radius: 8px;
+  }
+
+  .dashboard > .slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .dashboard > .slogan > .slogan-logo {
+    background-size: 220px;
+  }
+
+  .dashboard > .slogan > .slogan-title {
+    width: 258px;
+    padding: 10px 0;
+  }
+
+  .dashboard > .slogan > .slogan-title > h3 {
+    font-size: 18px;
+  }
+
+  .dashboard > .global {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .global > section {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  #news {
+    right: inherit;
+  }
+
+  #news > h4 {
+    font-size: 11px;
+  }
+
+  header > a {
+    width: 70px;
+    padding: 8px 10px;
+  }
+
+  header > a > #logo {
+    min-height: 34px;
+    background: url("/img/logo-title.png") no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  header > #conta {
+    width: 70px;
+    background: url("/img/conta.png") no-repeat center center;
+    background-size: contain;
+  }
+
+  .dashboard > div {
+    width: 100%;
+  }
+
+  .global {
+    min-height: 600px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .dashboard > h2 {
+    flex-direction: column;
+    justify-content: inherit;
+  }
+
+  .dashboard > h3 > p {
+    padding: 0 0 20px 0;
+  }
+
+  .dashboard > .slogan > .slogan-title {
+    max-width: 202px;
+  }
+
+  .dashboard > .slogan > .slogan-title > h3 {
+    font-size: 14px;
+  }
+}

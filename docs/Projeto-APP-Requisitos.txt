@@ -1,0 +1,42 @@
+## PROJETO APP ##
+##################################
+
+
+- TABELA DE REGISTRO:
+
+data
+brinco
+sexo
+raça
+lote
+pasto
+peso
+data
+
+
+##################################
+
+- INFOS DE OUTRAS TABELAS:
+
+FK pasto
+FK lote
+FK raça
+FK brinco
+
+
+##################################
+
+- COLUNAS CALCULADAS:
+
+GMD NOVO = (ULT PESO - PESO ATUAL) / (ULT DATA - DATA ATUAL)
+GMD CONSULTA = (ULT PESO - PESO ATUAL) / (ULT DATA - DATA ATUAL)
+GMD TOTAL = (PESO ATUAL - PRIM PESO) / (DATA ATUAL - PRIMEIRA DATA)
+
+ 
+##################################
+
+- DETALHE FUNCIONAL:
+
+TAB ou ENTER avança campos
+
+##################################

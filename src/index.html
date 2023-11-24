@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+    <meta name="theme-color" content="#006e63">
+    <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/home.css" type="text/css" media="screen">
+    <title>onPEC</title>
+  </head>
+  <body id="bg">
+    <div class="preloader fade-out">
+      <p>Verificando dados ...</p>
+      <div id="loading"></div>
+    </div>
+    <div id="color-wrapper"></div>
+    <div id="wrapper"></div>
+  
+    <div id="main" class="dashboard" style="animation: 0.8s ease-in-out 0s 1 normal forwards running fadeIn;">
+      <div class="slogan">
+        <div class="slogan-logo"></div>
+        <div class="slogan-title">
+          <h3>SLOGAN PARA EXIBIÇÃO</h3>
+        </div>
+        <div id="status">
+          <p>Verificando conexão com a nuvem . . .</p>
+          <i class="fa-solid fa-cloud" aria-hidden="true" onclick="syncDados()" title="Sincronizar"></i>
+        </div>
+      </div>
+      <div class="global">
+        <section>
+          <h3><p>PECUÁRIA</p></h3>
+          <a href="./pesagem-gado.html"><button>Pesagem de Gado</button></a>
+        </section>
+        <section>
+          <h3><p>Links para Sistemas</p></h3>
+          <a href="#" target="_blank"><button>ERP</button></a>
+          <a href="#" target="_blank"><button>PONTO</button></a>
+          <a href="#" target="_blank"><button>Webmail</button></a>
+        </section>
+      </div>
+    </div>
+
+    <div id="recursos">
+      <p>Usuário: <span id="usuario"></span></p>
+      <p>Máquina: <span id="maquina"></span></p>
+      <!-- <p>NodeJS: <span id="node-version"></span></p>
+      <p>ElectronJS: <span id="electron-version"></span></p>
+      <p>Chromium: <span id="chrome-version"></span></p> -->
+    </div>
+    <script>
+      const { ipcRenderer } = require('electron');
+      let statusNetwork = false;
+    </script>
+    <script src="./js/delay.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/checkInternet.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+    <meta name="theme-color" content="#006e63">
+    <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/pesagem-gado.css" type="text/css" media="screen">
+    <title>ON | Roncador</title>
+  </head>
+  <body id="bg">
+    <div class="preloader fade-out">
+      <p>Validando informações ...</p>
+      <button>OK</button>
+      <div id="loading"></div>
+    </div>
+    <div id="color-wrapper"></div>
+    <div id="wrapper"></div>
+  
+    <div id="main" class="pesagem-gado" style="animation: 0.8s ease-in-out 0s 1 normal forwards running fadeIn;">
+      <section class="title-form">
+        <h3>
+          <a href="./index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></i></a>
+          <p>&gt</p>
+          <p>Pesagem Gado</p>
+        </h3>
+      </section>
+
+      <section id ="secao-pesquisar-pesagem-gado">
+        <div class="set-pesagem-gado">
+          <label class="lbl-pesagem-gado" for="campo-brinco-pesagem-gado">Brinco</label>
+          <input id="campo-brinco-pesagem-gado" type="text" name="pesquisar" />
+        </div>
+        
+        <div class="set-pesagem-gado">
+          <label class="lbl-pesagem-gado" for="campo-sexo-pesagem-gado">Sexo</label>
+          <!-- <input id="campo-sexo-pesagem-gado" type="text" name="pesquisar" /> -->
+          <select name="campo-sexo-pesagem-gado" id="campo-sexo-pesagem-gado" title="campo-sexo-pesagem-gado">
+            <option value="0" disabled selected>Escolher Sexo...</option>
+            <option value="F">Fêmea</option>
+            <option value="M">Macho</option>
+          </select>
+        </div>
+        
+        <div class="set-pesagem-gado">
+          <label class="lbl-pesagem-gado" for="campo-raca-pesagem-gado">Raça</label>
+          <select name="campo-raca-pesagem-gado" id="campo-raca-pesagem-gado" title="campo-raca-pesagem-gado">
+            <option value="0" disabled selected>Escolher Raça...</option>
+          </select>
+        </div>
+        
+        <div class="set-pesagem-gado">
+          <label class="lbl-pesagem-gado" for="campo-lote-pesagem-gado">Lote</label>
+          <select name="campo-lote-pesagem-gado" id="campo-lote-pesagem-gado" title="campo-lote-pesagem-gado">
+            <option value="0" disabled selected>Escolher Lote...</option>
+          </select>
+        </div>
+        
+        <div class="set-pesagem-gado">
+          <label class="lbl-pesagem-gado" for="campo-pasto-pesagem-gado">Pasto</label>
+          <select name="campo-pasto-pesagem-gado" id="campo-pasto-pesagem-gado" title="campo-pasto-pesagem-gado">
+            <option value="0" disabled selected>Escolher Pasto...</option>
+          </select>
+        </div>
+        
+        <div class="set-pesagem-gado">
+          <label class="lbl-pesagem-gado" for="campo-fase-pesagem-gado">Fase</label>
+          <!-- <input id="campo-fase-pesagem-gado" type="text" name="pesquisar" /> -->
+          <select name="campo-fase-pesagem-gado" id="campo-fase-pesagem-gado" title="campo-fase-pesagem-gado">
+            <option value="0" disabled selected>Escolher Fase...</option>
+            <option value="">(Não definido)</option>
+          </select>
+        </div>
+        
+        <div class="set-pesagem-gado">
+          <label class="lbl-pesagem-gado" for="campo-novo-peso-pesagem-gado">Novo Peso</label>
+          <input id="campo-novo-peso-pesagem-gado" type="text" name="pesquisar" />
+        </div>
+
+        <div id="submit-pesagem-gado">
+          <button id="botao-pesquisar" class="submit">Adicionar Pesagem</button>
+        </div>
+
+        <h4 id="log-return" class="hide"> </h4>
+      </section>
+
+      <section id="consultas" class="consultas-pesagem-gado">
+        <table id="lista" class="lista-pesagem-gado">
+          <!-- Tabela para exibir dados adicionais -->
+        </table>
+        <canvas id="chart"></canvas>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const { ipcRenderer } = require('electron');
+      let statusNetwork = false;
+      let sinal = false;
+      let manip = null;
+      let chart;
+    </script>
+    <script src="./js/Pesagem/mapFields.js"></script>
+    <script src="./js/Pesagem/listFieldsPesagem.js"></script>
+    <script src="./js/Pesagem/manipPesagem.js"></script>
+    <script src="./js/formatDate.js"></script>
+    <script src="./js/formatTable.js"></script>
+    <script src="./js/returnLog.js"></script>
+    <script src="./js/validations.js"></script>
+    <script src="./js/delay.js"></script>
+    <script src="./js/processingLoad.js"></script>
+    <script src="./js/cleanFields.js"></script>
+    <script src="./js/checkInternet.js"></script>
+    <script src="./js/Pesagem/calcGMD.js"></script>
+    <script src="./js/Pesagem/createGraphPesagem.js"></script>
+    <script src="./js/Pesagem/getBrinco.js"></script>
+    <script src="./js/Pesagem/upsertPesagem.js"></script>
+    <script src="./js/Pesagem/destroyBrinco.js"></script>
+    <script src="./js/Pesagem/listennersPesagem.js"></script>
+  </body>
+</html>

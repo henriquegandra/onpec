@@ -1,0 +1,206 @@
+:root {
+  --roncador: #006e63;
+  --roncador20: #00584f;
+  --roncador30: #004d45;
+  --roncador40: #00423b;
+  --roncador50: #003732;
+  --roncador60: #002c28;
+  --roncador70: #00211e;
+  --roncador80: #001614;
+  --roncadoree: #006e6355;
+  --neonroncador: #1a7d73;
+  --neonroncadoree: #498d9cee;
+  --bg: #2f3241;
+  --bglight: #39646e;
+  --bgfe: #2f3241FE;
+  --bgee: #2f3241EE;
+  --bgbg: #20222c;
+  --bgbgee: #20222cee;
+  --bgbgaa: #20222caa;
+  --text: #EFEFEF;
+  --textee: #EFEFEFee;
+  --bsblack: #111111;
+  --bsblackcc: #111111cc;
+  --bsblack88: #11111188;
+  --hardneon: #00ded3;
+
+  /*
+  LETRA O centro
+  #00DED3
+
+  LETRA O contorno
+  #00DED3
+  #1AB4A4
+
+  LETRA N
+  #09DBD0
+  */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #efefef;
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+  outline: inherit;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 12px;
+  -webkit-app-region: drag;
+}
+
+#loading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(80% - 4px);
+  height: calc(80% - 4px);
+  min-height: 300px;
+  padding: 20px;
+  background: var(--bg);
+  border: 0;
+  border-radius: 12px;
+  /* background: linear-gradient(0deg, #333333 0%, var(--roncador20) 35%, var(--roncador50) 100%); */
+  /* Background Gradient
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(47,50,65,0.96) 6%);
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(47,50,65,0.96) 6%);
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(47,50,65,0.96) 6%);
+  */
+}
+
+#loading::before,
+#loading::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(45deg, var(--neonroncador), #008080, #1265d1, #9f05ad, #065668, #f8d32c, #f0f0f0, #7acee0);
+  background-size: 400%;
+  z-index: -1;
+  animation: animate 10s linear infinite;
+  border: 0;
+  border-radius: 12px;
+}
+
+#loading::after {
+  filter: blur(25px);
+  -webkit-filter: blur(25px);
+}
+
+#loading > #roncador-img {
+  display: flex;
+  width: calc(50% - 40px);
+  height: calc(50% - 40px);
+  margin: 20px;
+  background: url("../img/on-neon.gif") no-repeat center center;
+  background-size: auto 60px;
+}
+
+#loading > #intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(50% - 60px);
+  height: calc(50% - 60px);
+  padding: 30px;
+}
+
+#loading > #intro > h3 {
+  width: 100%;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--text);
+}
+
+#loading > #intro > h1 {
+  width: 100%;
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--text);
+}
+
+#loading > #intro > h4 {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--text);
+}
+
+#loading > #step-number {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  height: calc(40% - 40px);
+  margin: 0;
+  padding: 20px;
+}
+
+#loading > #step-messages {
+  width: 65%;
+  height: calc(40% - 40px);
+  margin: 0;
+  padding: 20px;
+}
+
+#loading > #loading-img {
+  width: 20%;
+  height: 40px;
+  /* margin: calc(10% - 30px) 0 calc(30% - 30px) 0; */
+}
+
+#loading > #application-version {
+  padding-top: 30px;
+  background: var(--bg);
+  font-size: 18px;
+  color: var(--text);
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+#loading > #loading-bar {
+  display: flex;
+  width: 100%;
+  height: 16px;
+}
+
+#loading-bar > #loading-bar-value {
+  width: 0;
+  height: 100%;
+  background: var(--neonroncador);
+  transition: width 0.2s;
+}
+
+#loading-img {
+  display: flex;
+  background: url("../img/loading.gif") no-repeat center center;
+  background-size: contain;
+}

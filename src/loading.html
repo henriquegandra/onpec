@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+    <meta name="theme-color" content="#006e63">
+    <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/loading.css" type="text/css" media="screen">
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <title>ON | Roncador</title>
+  </head>
+  <body>
+    <div id="loading">
+      <div id="roncador-img"></div>
+      <div id="intro">
+          <h3>Bem-vindo,</h3>
+          <h1 id="usuario"></h1>
+          <h4>Você está usando a máquina</h4>
+          <h1 id="maquina"></h1>
+          <p id="application-version"></p>
+      </div>
+      <div id="step-number">
+        <p id="actual-step"></p>
+      </div>
+      <div id="step-messages">
+        <p id="actual-step-message"></p>
+      </div>
+      <div id="loading-img"></div>
+      <div id="loading-bar">
+          <div id="loading-bar-value"></div>
+      </div>
+    </div>
+    <script>
+      const { ipcRenderer } = require('electron');
+    
+      // Defina um elemento HTML onde deseja exibir o passo atual
+      const actualStep = document.getElementById('actual-step');
+      const actualStepMsg = document.getElementById('actual-step-message');
+    
+      // Receba mensagens do processo principal e atualize o conteúdo do passo exibido
+      ipcRenderer.on('updateStep', async (event, statusProgress) => {
+        actualStep.style.width = '100%';
+        actualStep.style.color = '#efefef';
+        actualStep.style.fontSize = '16px';
+        actualStep.style.fontWeight = 'bold';
+        actualStep.style.textAlign = 'right';
+        
+        actualStepMsg.style.width = '100%';
+        actualStepMsg.style.color = '#efefef';
+        actualStepMsg.style.fontSize = '16px';
+
+        if (statusProgress.step !== null) {
+          actualStep.innerText = `Passo ${statusProgress.step}`;
+          actualStepMsg.innerText = `${statusProgress.message}`;
+        } else {
+          actualStep.innerText = '';
+          actualStepMsg.innerText = `${statusProgress.message}`;
+        }
+
+        if (statusProgress.errorAlert === true) {
+          alert(statusProgress.message);
+        }
+      });
+    </script>
+  </body>
+</html>

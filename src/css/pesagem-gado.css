@@ -1,0 +1,285 @@
+@import url("home.css");
+@import url("solid.min.css");
+@import url("fontawesome.min.css");
+
+.pesagem-gado {
+  flex-wrap: wrap;
+  max-width: 2000px;
+  padding: 20px 2vw;
+}
+
+.pesagem-gado > .title-form {
+  width: 100%;
+}
+
+.pesagem-gado > .title-form > h3 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px 12px 12px;
+  border-bottom: 1px solid #efefef;
+  font-size: calc(16px + 0.2vw);
+}
+
+.pesagem-gado > .title-form > h3 > a {
+  font-size: calc(11px + 0.2vw);
+}
+
+input[type='text']:focus {
+  box-shadow: 0px 0px 8px #efefef;
+}
+
+#secao-pesquisar-pesagem-gado {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+  padding: 20px 2vw;
+  min-width: 200px;
+}
+
+.set-pesagem-gado {
+  display: flex;
+  gap: 0 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.lbl-pesagem-gado {
+  width: calc(30% - 10px);
+  min-width: 90px;
+  padding: 14px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+#campo-brinco-pesagem-gado {
+  font-weight: bold;
+}
+
+#campo-brinco-pesagem-gado,
+#campo-sexo-pesagem-gado,
+#campo-raca-pesagem-gado,
+#campo-lote-pesagem-gado,
+#campo-pasto-pesagem-gado,
+#campo-fase-pesagem-gado,
+#campo-novo-peso-pesagem-gado {
+  width: 100%;
+  min-width: 120px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.info-pesagem-gado {
+  display: flex;
+  gap: 0px 10px;
+  flex-wrap: wrap;
+  width: calc(48% - 10px);
+  height: 90px;
+}
+
+.lbl-info-pesagem-gado {
+  width: 100%;
+  height: 40px;
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#campo-data-pesagem-gado,
+#campo-data-ult-pesagem-gado,
+#campo-ult-peso-pesagem-gado,
+#campo-gmd-pesagem-gado {
+  width: 100%;
+  background: var(--roncador80);
+  border-radius: 8px;
+  text-align: center;
+}
+
+#submit-pesagem-gado {
+  display: flex;
+  gap: 0 10px;
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0 10px 0;
+}
+
+#botao-pesquisar {
+  width: 100%;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+#botao-destroy {
+  width: calc(30% - 10px);
+  min-width: 90px;
+  height: 40px;
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+#botao-destroy:focus, #botao-destroy:hover {
+  background-color: #800000;
+}
+
+.consultas-pesagem-gado {
+  width: calc(60% - 40px);
+  height: calc(100vh - 130px);
+  min-height: 400px;
+  margin: 20px;
+}
+
+.lista-pesagem-gado tbody {
+  border-radius: 8px;
+}
+
+.lista-pesagem-gado > tr {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.lista-pesagem-gado tr:hover {
+  background: #FFFFFF22;
+}
+
+.lista-pesagem-gado th {
+  width: inherit;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--neonroncador);
+  font-size: calc(9px + 0.2vw);
+  font-weight: bold;
+}
+
+.lista-pesagem-gado td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--text);
+  font-size: calc(10px + 0.3vw);
+  text-align: center;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(1), .lista-pesagem-gado > tr > th:nth-child(1) {
+  width: 0;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(2), .lista-pesagem-gado > tr > th:nth-child(2) {
+  width: 120px;
+  font-weight: bold;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(3), .lista-pesagem-gado > tr > th:nth-child(3) {
+  width: 100px;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(4), .lista-pesagem-gado > tr > th:nth-child(4) {
+  width: 100px;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(5), .lista-pesagem-gado > tr > th:nth-child(5) {
+  width: 100px;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(6), .lista-pesagem-gado > tr > th:nth-child(6) {
+  width: 100px;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(7), .lista-pesagem-gado > tr > th:nth-child(7) {
+  width: 250px;
+  white-space: nowrap;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(8), .lista-pesagem-gado > tr > th:nth-child(8) {
+  width: 150px;
+  white-space: nowrap;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(9), .lista-pesagem-gado > tr > th:nth-child(9) {
+  width: 250px;
+  white-space: nowrap;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(10), .lista-pesagem-gado > tr > th:nth-child(10) {
+  width: 150px;
+  white-space: nowrap;
+}
+
+.lista-pesagem-gado > tr > td:nth-child(11), .lista-pesagem-gado > tr > th:nth-child(11) {
+  width: 150px;
+  font-weight: bold;
+}
+
+.lista-pesagem-gado tbody {
+  border-radius: 8px;
+}
+
+#chart {
+  padding: 20px 30px;
+}
+
+@media only screen and (max-width: 900px) {
+
+  #secao-pesquisar-pesagem-gado, #secao-infos-pesagem-gado, .consultas-pesagem-gado {
+    gap: 10px;
+    width: 100%;
+    min-width: inherit;
+    margin: 0;
+    height: inherit;
+  }
+
+  #campo-brinco-pesagem-gado,
+  #campo-sexo-pesagem-gado,
+  #campo-raca-pesagem-gado,
+  #campo-lote-pesagem-gado,
+  #campo-pasto-pesagem-gado,
+  #campo-fase-pesagem-gado,
+  #campo-novo-peso-pesagem-gado,
+  #botao-pesquisar,
+  #botao-destroy,
+  .info-pesagem-gado,
+  .set-pesagem-gado {
+    min-width: 300px;
+    font-size: 13px;
+  }
+
+  .lbl-info-pesagem-gado {
+    text-align: inherit;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  #campo-brinco-pesagem-gado,
+  #campo-sexo-pesagem-gado,
+  #campo-raca-pesagem-gado,
+  #campo-lote-pesagem-gado,
+  #campo-pasto-pesagem-gado,
+  #campo-fase-pesagem-gado,
+  #campo-novo-peso-pesagem-gado,
+  #botao-pesquisar,
+  #botao-destroy,
+  .info-pesagem-gado,
+  .set-pesagem-gado {
+    width: 100%;
+    min-width: inherit;
+  }
+
+  .lbl-pesagem-gado {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #main {
+    padding: 20px 2vw;
+  }
+}

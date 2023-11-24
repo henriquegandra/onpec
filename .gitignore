@@ -1,0 +1,8 @@
+node_modules
+yarn.lock
+yarn-error.log
+out/
+*.db
+*.pfx
+*.code-workspace
+*.editorconfig
